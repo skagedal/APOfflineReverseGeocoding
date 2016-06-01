@@ -34,6 +34,11 @@
     return self;
 }
 
+- (instancetype)init {
+    NSAssert(NO, @"use initWithCountryCode:");
+    return nil;
+}
+
 #pragma mark - Public
 
 - (NSDictionary *)build

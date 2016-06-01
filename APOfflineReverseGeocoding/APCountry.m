@@ -16,6 +16,11 @@
     return [[self alloc] initWithGeoDictionary:dictionary];
 }
 
+- (instancetype)init {
+    NSAssert(NO, @"use initWithGeoDictionary:");
+    return nil;
+}
+
 - (instancetype)initWithGeoDictionary:(NSDictionary *)dictionary
 {
     self = [super init];

@@ -23,9 +23,7 @@ static NSString *const APReverseGeocodingCountriesKey  = @"features";
 
 + (instancetype)defaultGeocoding
 {
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    NSURL *url = [bundle URLForResource:APReverseGeocodingDefaultDBName withExtension:@"json"];
-    return [self geocodingWithGeoJSONURL:url];
+    return [[self alloc] init];
 }
 
 + (instancetype)geocodingWithGeoJSONURL:(NSURL *)url
@@ -41,6 +39,12 @@ static NSString *const APReverseGeocodingCountriesKey  = @"features";
         _url = url;
     }
     return self;
+}
+
+- (instancetype)init {
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSURL *url = [bundle URLForResource:APReverseGeocodingDefaultDBName withExtension:@"json"];
+    return [self initWithGeoJSONURL:url];
 }
 
 #pragma mark - Public
