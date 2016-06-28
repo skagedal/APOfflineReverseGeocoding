@@ -29,6 +29,8 @@
  */
 - (instancetype)initWithGeoDictionary:(NSDictionary *)dictionary NS_DESIGNATED_INITIALIZER;
 
+- (instancetype)init NS_UNAVAILABLE;
+
 /* Represents country 3 digits code ISO 3166-1 Alpha 3 */
 @property (nonatomic, copy, readonly) NSString *code;
 

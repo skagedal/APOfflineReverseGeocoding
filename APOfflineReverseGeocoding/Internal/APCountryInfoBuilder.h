@@ -29,6 +29,8 @@
  */
 - (instancetype)initWithCountryCode:(NSString *)countryCode NS_DESIGNATED_INITIALIZER;
 
+- (instancetype)init NS_UNAVAILABLE;
+
 /**
  *  Imports the country info
  *

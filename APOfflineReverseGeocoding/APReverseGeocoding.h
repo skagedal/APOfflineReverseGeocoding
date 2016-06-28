@@ -38,6 +38,8 @@
  */
 - (instancetype)initWithGeoJSONURL:(NSURL *)url __attribute__((nonnull)) NS_DESIGNATED_INITIALIZER;
 
+- (instancetype)init NS_UNAVAILABLE;
+
 @property (nonatomic, strong, readonly) NSURL *url;
 
 /**
